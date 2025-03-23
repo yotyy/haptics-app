@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>Haptic-trace app</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Haptic-trace app</h1>
+  <div id="container">
+    <canvas id="drawCanvas" width="600" height="600"></canvas>
+
+    <div class="controls">
+      <div class="control">
+        <label for="sizeSlider">Size</label>
+        <input type="range" id="sizeSlider" min="1" max="50" value="10">
+      </div>
+      <div class="control">
+        <label for="opacitySlider">Thickness</label>
+        <input type="range" id="opacitySlider" min="0" max="255" value="200">
+      </div>
+    </div>
+
+    <video id="input_video" autoplay playsinline></video>
+  </div>
+
+  <!-- MediaPipe Handsライブラリ -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.min.js"></script>
+
+  <!-- アプリ本体のスクリプト -->
+  <script src="script.js"></script>
+</body>
+</html>
