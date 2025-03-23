@@ -32,7 +32,7 @@ hands.onResults(results => {
   const landmarks = results.multiHandLandmarks[0];
   const finger = landmarks[8]; // 人差し指の先端
   
-  // x座標だけ左右反転
+  // xとy座標の方向を反転（天井のカメラで捉えることを想定)
   const x = (1 - finger.x) * canvas.width;
   const y = (1 - finger.y) * canvas.height;
 
